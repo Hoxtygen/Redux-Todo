@@ -1,6 +1,6 @@
 import uuid from "uuid";
 
-const todos = [
+export default [
     {
         id: uuid(),
         value: "Make a visit to Anfield",
@@ -32,4 +32,3 @@ const todos = [
     },
 ];
 
-export default todos;
