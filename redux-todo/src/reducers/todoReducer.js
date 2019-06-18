@@ -12,6 +12,8 @@ function todoReducer(state = dummyTodo, action) {
                     }
                     return todo;
                 });
+        case (types.DELETE_TODO): 
+            return state.filter(todo => todo.id !== action.payload)
         default:
             return state;
     }

@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 
 export default class Todo extends Component {
     render() {
-        const { todo, markAsCompleted } = this.props;
+        const { todo, markAsCompleted, deleteTodo } = this.props;
         return (
             <div>
                 <div>
@@ -11,6 +11,7 @@ export default class Todo extends Component {
                     <p>Completed: {`${todo.completed}`}</p>
                 </div>
                 <button onClick = {() => markAsCompleted(todo.id)} >Mark complete</button>
+                <button onClick = {() => deleteTodo(todo.id)} >Delete Todo</button>
             </div>
         )
     }

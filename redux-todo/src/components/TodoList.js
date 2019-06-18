@@ -8,7 +8,8 @@ import Todo from './Todo';
 export class TodoList extends Component {
     
     render() {
-        const todos = this.props.todos || []        
+        const todos = this.props.todos || []
+        console.log(this.props)   
         return (
             <div>
                 {
@@ -17,6 +18,7 @@ export class TodoList extends Component {
                             key = {todo.id}
                             todo = {todo}
                             markAsCompleted = {this.props.markComplete}
+                            deleteTodo = {this.props.deleteTodo}
                          />
                     ))
                 }
