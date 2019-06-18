@@ -21,7 +21,6 @@ function App() {
     <Provider store = {store}>
       <div className="App">
         <h1>Welcome to Redux-Todo Application.</h1>
-        <p>Remember everything you plan should be all about you.</p>
         <TodoList />
         <TodoForm />
       </div>

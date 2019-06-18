@@ -6,17 +6,17 @@ import Todo from './Todo';
 //import PropTypes from 'prop-types'
 
 export class TodoList extends Component {
+    
     render() {
-        const todos = this.props.todos || []
+        const todos = this.props.todos || []        
         return (
             <div>
-                <h2>I contain all the list of todos, and they all get mapped in here.</h2>
-
                 {
                     todos.map(todo => (
                         <Todo
                             key = {todo.id}
                             todo = {todo}
+                            markAsCompleted = {this.props.markComplete}
                          />
                     ))
                 }

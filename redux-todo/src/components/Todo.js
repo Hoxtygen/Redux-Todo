@@ -3,14 +3,14 @@ import React, { Component } from 'react'
 
 export default class Todo extends Component {
     render() {
-        const { todo } = this.props;
+        const { todo, markAsCompleted } = this.props;
         return (
             <div>
                 <div>
                     <h3>{todo.value}</h3>
                     <p>Completed: {`${todo.completed}`}</p>
                 </div>
-                <button>Mark complete</button>
+                <button onClick = {() => markAsCompleted(todo.id)} >Mark complete</button>
             </div>
         )
     }
